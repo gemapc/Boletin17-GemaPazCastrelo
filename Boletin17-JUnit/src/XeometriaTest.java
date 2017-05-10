@@ -60,7 +60,7 @@ public class XeometriaTest {
 	public void testTeoremaPitagorasDoubleDouble() {
 		Xeometria xeometria=new Xeometria();
 		
-		assertEquals(24,xeometria.teoremaPitagoras(25,7),0.01);
+		assertEquals(24,xeometria.teoremaPitagoras(25.0,7.0),0.01);
 		assertEquals(1,xeometria.teoremaPitagoras(2.24,2),0.01);
 		assertEquals(0,xeometria.teoremaPitagoras(0,0),0.01);
 		assertEquals(-1,xeometria.teoremaPitagoras(-25,7),0.01);
