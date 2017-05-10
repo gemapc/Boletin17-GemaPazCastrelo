@@ -18,6 +18,7 @@ public class Xeometria {
 	
 	public double teoremaPitagoras(double hipotenusa, double catetoA){
 		if(catetoA<0 || hipotenusa<0) return -1;
+		else if(hipotenusa<catetoA) return -1;
 		return Math.sqrt(hipotenusa*hipotenusa-catetoA*catetoA);
 	}
 }

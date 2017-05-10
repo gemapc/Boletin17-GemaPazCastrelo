@@ -66,6 +66,7 @@ public class XeometriaTest {
 		assertEquals(-1,xeometria.teoremaPitagoras(-25,7),0.01);
 		assertEquals(-1,xeometria.teoremaPitagoras(25,-7),0.01);
 		assertEquals(-1,xeometria.teoremaPitagoras(-25,-7),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(7.0,25.0),0.01);
 	}
 
 }
