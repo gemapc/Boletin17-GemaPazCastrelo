@@ -38,7 +38,7 @@ public class DNI {
 		int resto=-1,numero=0;
 		
 		for(int i=0;i<numeros.size();i++)
-			numero=(int)(numeros.get(i)*Math.pow(10,8-i));
+			numero+=(int)(numeros.get(i)*Math.pow(10,(numeros.size()-1)-i));
 		resto=numero%23;
 		for(int i=0;i<letras.length;i++)
 			if(resto==i)
@@ -53,7 +53,7 @@ public class DNI {
 		int resto=-1,numero=0;
 		
 		for(int i=0;i<numeros.size();i++)
-			numero=(int)(numeros.get(i)*Math.pow(10,8-i));
+			numero+=(int)(numeros.get(i)*Math.pow(10,(numeros.size()-1)-i));
 		resto=numero%23;
 		for(int i=0;i<letras.length;i++)
 			if(resto==i)
