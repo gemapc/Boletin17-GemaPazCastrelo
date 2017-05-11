@@ -1,3 +1,4 @@
+package Boletin17;
 /**
  * @author Gema Paz Castrelo
  */
