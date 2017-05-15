@@ -96,6 +96,8 @@ public class DNITest {
 		assertEquals('F',dni.calculaLetra(numeros4));
 		numeros4.set(0,10);
 		assertEquals(-1,dni.calculaLetra(numeros4));
+		numeros4.set(0,-1);
+		assertEquals(-1,dni.calculaLetra(numeros4));
 	}
 
 }

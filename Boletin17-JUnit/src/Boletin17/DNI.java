@@ -10,6 +10,7 @@ public class DNI {
 	
 	/**
 	 * Método que valora se un DNI é válido ou non, se o número se corresponde coa letra.
+	 * Se un numero é menor que 8 cifras, completase con 0 pola esquerda.
 	 * @param numeroLetra String co valor do NIF, é dicir, coa letra.
 	 * @return true se o valor do DNI se corresponde coa letra, false en caso contrario.
 	 */
@@ -31,7 +32,8 @@ public class DNI {
 	}
 	
 	/**
-	 * Método que calcula a letra válida para un número DNI.
+	 * Método que calcula a letra válida para un número DNI. Se un numero é menor que 8
+	 * cifras, completase con 0 pola esquerda.
 	 * @param numero String co número DNI sobre o que se quere calcular a letra correspondente.
 	 * @return O valor int correspondente á posición da letra.
 	 */
@@ -53,6 +55,7 @@ public class DNI {
 	
 	/**
 	 * Método que valora se un DNI é válido ou non, se o número se corresponde coa letra.
+	 * Se un numero é menor que 8  cifras, completase con 0 pola esquerda.
 	 * @param numeros ArrayList de enteiros co número do DNI.
 	 * @param letra Letra a probar a súa validez co número.
 	 * @return true se a letra se corresponde co número, false en caso contrario.
@@ -74,6 +77,7 @@ public class DNI {
 	
 	/**
 	 * Método que calcula a letra válida para un número DNI.
+	 * Se un numero é menor que 8  cifras, completase con 0 pola esquerda.
 	 * @param numeros ArrayList de enteiros co número DNI sobre o 
 	 * que se quere calcular a letra correspondente.
 	 * @return O valor int correspondente á posición da letra.
