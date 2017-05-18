@@ -43,6 +43,7 @@ public class DNITest {
 		assertEquals(false,dni.eValido("12358Y"));
 		assertEquals(false,dni.eValido("1A358Y"));
 		assertEquals(false,dni.eValido("-1A358Y"));
+		assertEquals(false,dni.eValido("-1A35878"));
 	}
 
 	@Test

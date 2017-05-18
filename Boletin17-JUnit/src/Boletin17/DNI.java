@@ -17,20 +17,20 @@ public class DNI {
 	public boolean eValido(String numeroLetra){
 		if(numeroLetra.length()<2 || numeroLetra.length()>9) return false;
 		
+		String dni=numeroLetra.toUpperCase();
 		char letra;
-		int numero=0,resto=-1,contador=0;
+		int numero=0,resto=-1;
 		
-		for(int i=0;i<numeroLetra.length()-1;i++){
-			if(numeroLetra.charAt(i)<'0' || numeroLetra.charAt(i)>'9') return false;
-			contador++;
+		for(int i=0;i<dni.length()-2;i++){
+			if(dni.charAt(i)<'0' || dni.charAt(i)>'9') return false;
 		}
-		numero=Integer.parseInt(numeroLetra.substring(0,contador));
-		letra=numeroLetra.charAt(numeroLetra.length()-1);
+		numero=Integer.parseInt(dni.substring(0,numeroLetra.length()-1));
+		
+		if(dni.charAt(dni.length()-1)<'A' || dni.charAt(dni.length()-1)>'Z') return false;
+		letra=dni.charAt(dni.length()-1);
+		
 		resto=numero%23;
-		for(int i=0;i<letras.length;i++)
-			if(resto==i)
-				if(letra==letras[i])
-					return true;
+		if(letra==letras[resto]) return true;
 		return false;
 	}
 	
@@ -47,13 +47,8 @@ public class DNI {
 		
 		for(int i=0;i<numero.length();i++)
 			if(numero.charAt(i)<'0' || numero.charAt(i)>'9') return -1;
-		
 		resto=Integer.parseInt(numero)%23;
-		for(int i=0;i<letras.length;i++){
-			if(resto==i)
-				return letras[i];
-		}
-		return -1;
+		return letras[resto];
 	}
 	
 	/**
@@ -68,13 +63,12 @@ public class DNI {
 		
 		int resto=-1,numero=0;
 		
-		for(int i=0;i<numeros.size();i++)
+		for(int i=0;i<numeros.size();i++){
+			if(numeros.get(i)<0 || numeros.get(i)>9) return false;
 			numero+=(int)(numeros.get(i)*Math.pow(10,(numeros.size()-1)-i));
+		}
 		resto=numero%23;
-		for(int i=0;i<letras.length;i++)
-			if(resto==i)
-				if(letra==letras[i])
-					return true;
+		if(letra==letras[resto]) return true;
 		return false;		
 	}
 	
@@ -95,9 +89,6 @@ public class DNI {
 			numero+=(int)(numeros.get(i)*Math.pow(10,(numeros.size()-1)-i));
 		}
 		resto=numero%23;
-		for(int i=0;i<letras.length;i++)
-			if(resto==i)
-				return letras[i];
-		return -1;
+		return letras[resto];
 	}
 }
