@@ -20,7 +20,10 @@ public class DNI {
 		char letra;
 		int numero=0,resto=-1,contador=0;
 		
-		while(numeroLetra.charAt(contador)>='0' && numeroLetra.charAt(contador)<='9') contador++;
+		for(int i=0;i<numeroLetra.length()-1;i++){
+			if(numeroLetra.charAt(i)<'0' || numeroLetra.charAt(i)>'9') return false;
+			contador++;
+		}
 		numero=Integer.parseInt(numeroLetra.substring(0,contador));
 		letra=numeroLetra.charAt(numeroLetra.length()-1);
 		resto=numero%23;

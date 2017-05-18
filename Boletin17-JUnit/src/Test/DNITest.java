@@ -42,6 +42,7 @@ public class DNITest {
 		assertEquals(true,dni.eValido("123P"));
 		assertEquals(false,dni.eValido("12358Y"));
 		assertEquals(false,dni.eValido("1A358Y"));
+		assertEquals(false,dni.eValido("-1A358Y"));
 	}
 
 	@Test
@@ -53,6 +54,7 @@ public class DNITest {
 		assertEquals('T',dni.calculaLetra("0"));
 		assertEquals('P',dni.calculaLetra("123"));
 		assertEquals('F',dni.calculaLetra("12358"));
+		assertEquals(-1,dni.calculaLetra("-12358"));
 	}
 
 	@Test
@@ -75,6 +77,8 @@ public class DNITest {
 		assertEquals(true,dni.eValido(numeros3,'P'));
 		assertEquals(false,dni.eValido(numeros4,'Y'));
 		numeros4.set(0,10);
+		assertEquals(false,dni.eValido(numeros4,'Y'));
+		numeros4.set(0,-1);
 		assertEquals(false,dni.eValido(numeros4,'Y'));
 	}
 
