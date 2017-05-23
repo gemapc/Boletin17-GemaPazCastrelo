@@ -31,7 +31,7 @@ public class Xeometria {
 	 * @return O valor da hipotenusa.
 	 */
 	public double teoremaPitagoras(int catetoA, int catetoB){
-		if(catetoA<0 || catetoB<0) return -1;
+		if(catetoA<=0 || catetoB<=0) return -1;
 		return Math.sqrt(catetoA*catetoA+catetoB*catetoB);
 	}
 	
@@ -42,7 +42,7 @@ public class Xeometria {
 	 * @return O valor do cateto restante.
 	 */
 	public double teoremaPitagoras(double hipotenusa, double catetoA){
-		if(catetoA<0 || hipotenusa<0) return -1;
+		if(catetoA<=0 || hipotenusa<=0) return -1;
 		else if(hipotenusa<catetoA) return -1;
 		return Math.sqrt(hipotenusa*hipotenusa-catetoA*catetoA);
 	}

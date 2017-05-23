@@ -54,10 +54,14 @@ public class XeometriaTest {
 		
 		assertEquals(25,xeometria.teoremaPitagoras(7,24),0.01);
 		assertEquals(2.24,xeometria.teoremaPitagoras(1,2),0.01);
-		assertEquals(0,xeometria.teoremaPitagoras(0,0),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(0,0),0.01);
 		assertEquals(-1,xeometria.teoremaPitagoras(-7,24),0.01);
 		assertEquals(-1,xeometria.teoremaPitagoras(7,-24),0.01);
 		assertEquals(-1,xeometria.teoremaPitagoras(-7,-24),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(-7,0),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(0,-24),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(0,24),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(7,0),0.01);
 	}
 
 	@Test
@@ -66,11 +70,16 @@ public class XeometriaTest {
 		
 		assertEquals(24,xeometria.teoremaPitagoras(25.0,7.0),0.01);
 		assertEquals(1,xeometria.teoremaPitagoras(2.24,2),0.01);
-		assertEquals(0,xeometria.teoremaPitagoras(0,0),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(0,0),0.01);
 		assertEquals(-1,xeometria.teoremaPitagoras(-25,7),0.01);
 		assertEquals(-1,xeometria.teoremaPitagoras(25,-7),0.01);
 		assertEquals(-1,xeometria.teoremaPitagoras(-25,-7),0.01);
 		assertEquals(-1,xeometria.teoremaPitagoras(7.0,25.0),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(0,-1),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(0,25.0),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(-1,0),0.01);
+		assertEquals(-1,xeometria.teoremaPitagoras(7.0,0),0.01);
+
 	}
 
 }
